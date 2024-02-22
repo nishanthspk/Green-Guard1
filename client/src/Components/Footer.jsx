@@ -10,12 +10,12 @@ function MyFooter() {
   return (
     <>
       
-      <div className='d-flex justify-content-between flex-wrap bg-dark text-white fixed-bottom'>
+      <div className='d-flex justify-content-between flex-wrap bg-dark text-white mt-auto border-top ' >
 
-          <div className='d-flex justify-content-center  align-items-center p-3'>
-            <Navbar.Brand as={Link} to="/" className='fs-1 fw-medium ' >
-                <img src={logo} alt="Logo" height='100px' width='100px' className='me-2'/>
-                Green Guard
+          <div className='d-flex justify-content-center  align-items-center '>
+            <Navbar.Brand as={Link} to="/" className='fs-2 fw-medium ' >
+                <img src={logo} alt="Logo" height='80px' width='80px' className='me-2'/>
+                <span className='fs-1'>G</span>reen <span className='fs-1'>G</span>uard
             </Navbar.Brand>
           </div>
 

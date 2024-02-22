@@ -1,3 +1,20 @@
+/* Hide scrollbar for Chrome, Safari and Opera */
+html::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  html {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    
+  }
 nav{
     font-family: "Poppins", sans-serif;
+}
+body{
+  background-color: rgb(33, 37, 41);
+}
+@media (min-width: 992px) {
+  .rounded-lg-3 { border-radius: .3rem; }
 }
