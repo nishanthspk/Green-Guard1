@@ -1,8 +1,7 @@
 import React from 'react';
-import { Container, Row, Col, Form, Button, Image } from 'react-bootstrap';
+import { Image } from 'react-bootstrap';
 import logo from '../assets/Images/Logo.png'
-import { Link } from 'react-router-dom';
-import FloatingLabel from 'react-bootstrap/FloatingLabel';
+
 
 
 export default function Signin() {
@@ -29,30 +28,30 @@ export default function Signin() {
     //     </Container>
     //     </div>
     <div style={{width:'100%'}} className=' bg-dark'>
-<div class="container col-xl-10 col-xxl-8 px-4 py-5 ">
-    <div class="row align-items-center g-lg-5 py-5">
-      <div class="col-lg-7 text-center ">
+<div className="container col-xl-10 col-xxl-8 px-4 py-5 ">
+    <div className="row align-items-center g-lg-5 py-5">
+      <div className="col-lg-7 text-center ">
       <Image src={logo}   />
       <h3 className='fs-3 fw-medium text-white text-center'><span className='fs-1'>G</span>reen <span className='fs-1'>G</span>uard</h3>
       </div>
-      <div class="col-md-10 mx-auto col-lg-5">
-        <form class="p-4 p-md-5 border rounded-3 bg-body-tertiary">
-          <div class="form-floating mb-3">
-            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"/>
+      <div className="col-md-10 mx-auto col-lg-5">
+        <form className="p-4 p-md-5 border rounded-3 bg-body-tertiary">
+          <div className="form-floating mb-3">
+            <input type="email" className="form-control" id="floatingInput" placeholder="name@example.com"/>
             <label for="floatingInput">Email address</label>
           </div>
-          <div class="form-floating mb-3">
-            <input type="password" class="form-control" id="floatingPassword" placeholder="Password"/>
+          <div className="form-floating mb-3">
+            <input type="password" className="form-control" id="floatingPassword" placeholder="Password"/>
             <label for="floatingPassword">Password</label>
           </div>
-          <div class="checkbox mb-3">
+          <div className="checkbox mb-3">
             <label>
               <input type="checkbox" value="remember-me"/> Remember me
             </label>
           </div>
-          <button class="w-100 btn btn-lg btn-success" type="submit">Login</button>
-          <hr class="my-4"/>
-          <small class="text-body-secondary">By clicking Login, you agree to the terms of use.</small>
+          <button className="w-100 btn btn-lg btn-success" type="submit">Login</button>
+          <hr className="my-4"/>
+          <small className="text-body-secondary">By clicking Login, you agree to the terms of use.</small>
         </form>
       </div>
     </div>

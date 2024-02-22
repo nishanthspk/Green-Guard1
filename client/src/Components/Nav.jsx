@@ -17,9 +17,8 @@ function myNavbar() {
         <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto gap-4 ">
             <Nav.Link as={Link} to="/">Home</Nav.Link>
-            <Nav.Link as={Link} to="/news">News</Nav.Link>
             <Nav.Link as={Link} to="/awareness">Awareness</Nav.Link>
-            <Nav.Link as={Link} to="/guidelines">Guidelines</Nav.Link>
+            <Nav.Link as={Link} to="/news">News</Nav.Link>
             <Nav.Link as={Link} to="/complaints">Complaints</Nav.Link>
             <Nav.Link as={Link} to="/signin"><Button variant="success" className='ms-4'>Login</Button>{' '}</Nav.Link>
           </Nav>

@@ -1,4 +1,3 @@
-import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom';
 import logo from '../assets/Images/Logo.png';
@@ -9,8 +8,8 @@ import { FaLinkedin, FaTwitter } from 'react-icons/fa';
 function MyFooter() {
   return (
     <>
-      
-      <div className='d-flex justify-content-between flex-wrap bg-dark text-white mt-auto border-top ' >
+      <div className='c container-fluid bg-dark'>
+      <div className='d-flex justify-content-between flex-wrap  text-white mt-auto container border-top' >
 
           <div className='d-flex justify-content-center  align-items-center '>
             <Navbar.Brand as={Link} to="/" className='fs-2 fw-medium ' >
@@ -35,7 +34,6 @@ function MyFooter() {
             <div className='d-flex flex-column gap-2'>
             <Link to='/news' className='text-secondary text-decoration-none fs-6'>News</Link>
             <Link to='/awareness' className='text-secondary text-decoration-none fs-6'>Awareness</Link>
-            <Link to='/guidelines' className='text-secondary text-decoration-none fs-6'>Guidelines</Link>
             <Link to='/complaints' className='text-secondary text-decoration-none fs-6'>Complaints</Link>
             </div>
           </div>
@@ -52,7 +50,8 @@ function MyFooter() {
           
 
         </div>
-
+        <p className="col-md-4 mb-0 text-white bg-dark w-100 text-center pb-4">&copy; 2024 Green Guard, All rights reserved.</p>
+        </div>
     </>
   );
 }

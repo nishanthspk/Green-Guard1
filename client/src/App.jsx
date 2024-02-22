@@ -2,7 +2,6 @@ import React from 'react'
 import Navbar from './Components/Nav'
 import Awareness from './Pages/Awareness'
 import Complaints from './Pages/Complaints'
-import Guidelines from './Pages/Guidelines'
 import Home from './Pages/Home'
 import News from './Pages/News'
 import Signin from './Pages/Signin'
@@ -17,7 +16,6 @@ export default function App() {
         <Route path='/' element={<Home />} />
         <Route path='/news' element={<News />} />
         <Route path='/awareness' element={<Awareness />} />
-        <Route path='/guidelines' element={<Guidelines />} />
         <Route path='/complaints' element={<Complaints />} />
         <Route path='/signin' element={<Signin />} />
       </Routes>
