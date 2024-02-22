@@ -18,3 +18,120 @@ body{
 @media (min-width: 992px) {
   .rounded-lg-3 { border-radius: .3rem; }
 }
+section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Merienda', cursive;
+  
+  
+}
+.container5{
+  position: relative;
+  width: 410px;
+  min-height: 400px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(248, 249, 250)!important;
+  box-shadow: 0px 0px 6px 6px rgba(0,0,0,.3);
+  
+  
+}
+
+.form{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+}
+
+.form h2{
+  position: relative;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.form h2:before{
+  content: '';
+  position: absolute;
+  left: 76px;
+  bottom: -10px;
+  width: 80px;
+  height: 4px;
+  background:#212529;
+}
+
+.form .inputBx{
+  width: 100%;
+  margin-top: 20px;
+  border: none;
+  
+}
+
+.form .inputBx input{
+  width: 100%;
+  background:#212529;
+  box-shadow: 0px 0px 6px 6px rgba(0,0,0,.3);
+  border: none;
+   padding: 10px 20px;
+   border-radius: 35px;
+   font-size: 16px;
+   letter-spacing: 1px;
+   color:  white;
+}
+
+.form .inputBx textarea{
+  width: 100%;
+  height: 140px;
+  resize: none;
+  background-color: rgb(25, 25, 36)!important;
+  box-shadow: 0px 0px 6px 6px rgba(0,0,0,.3);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 15px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  color:  white;
+  
+}
+.form .inputBx textarea::after{
+  border: none;
+  box-shadow: 0px 0px 6px 8px rgba(0,0,0,.3)!important;
+}
+
+.form .inputBx input::placeholder{
+  color: white;
+}
+
+.form .inputBx textarea::placeholder{
+  color: white;
+}
+
+.form .inputBx input[type="submit"]{
+  /* background: rgb(133, 76, 230); */
+ background-color: rgb(21, 115, 71);
+  color: white;
+  max-width: 150px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  margin-left: 80px;
+  font-weight: 600;
+  transition: .5s ease-in-out;
+}
+
+.form .inputBx input[type="submit"]:hover{
+  
+  color: #fff;
+  font-weight: 600;
+}
+
+.text{
+  margin-top: 5px;
+  color: white;
+}
