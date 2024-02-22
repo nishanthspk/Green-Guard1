@@ -5,6 +5,7 @@ import Complaints from './Pages/Complaints'
 import Guidelines from './Pages/Guidelines'
 import Home from './Pages/Home'
 import News from './Pages/News'
+import Signin from './Pages/Signin'
 import { BrowserRouter as Router, Routes,Route } from 'react-router-dom'
 
 export default function App() {
@@ -17,6 +18,7 @@ export default function App() {
         <Route path='/awareness' element={<Awareness />} />
         <Route path='/guidelines' element={<Guidelines />} />
         <Route path='/complaints' element={<Complaints />} />
+        <Route path='/signin' element={<Signin />} />
       </Routes>
       
     </Router>
