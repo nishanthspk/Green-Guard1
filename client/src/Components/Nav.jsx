@@ -9,7 +9,7 @@ function myNavbar() {
     <Navbar expand="lg" className="bg-dark navbar-dark">
       <Container>
         <Navbar.Brand href="#home" className='fs-3 fw-medium ' >Green Guard</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Toggle aria-controls="basic-navbar-nav " />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto gap-4 ">
             <Nav.Link href="#home">Home</Nav.Link>
