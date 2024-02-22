@@ -8,7 +8,7 @@ import logo from '../assets/Images/Logo.png';
 
 function myNavbar() {
   return (
-    <Navbar expand="lg" className="bg-dark navbar-dark border-bottom"  sticky="top" >
+    <Navbar expand="lg" className="bg-dark navbar-dark "  sticky="top" >
       <Container>
         <Navbar.Brand as={Link} to="/" className='fs-4 fw-medium ' >
         <img src={logo} alt="Logo" height='50px' width='50px' className='me-2'/>
