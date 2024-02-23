@@ -10,24 +10,22 @@ export default function Signin() {
   const [email,setEmail] = useState('');
     const [password,setPassword] = useState('');
     const baseUrl = 'http://localhost:3000';
-    const [formData, setFormData] = useState({});
     const navigate = useNavigate();
-    const handleChange = (e) => {
-      setFormData({ ...formData, [e.target.id]: e.target.value.trim() });     
-    };
+    const [errorMessage, setErrorMessage] = useState(null);
+    const [loading, setLoading] = useState(false);
     const handleSubmit=async(e)=>{
       e.preventDefault();
-      // if (!formData.email || !formData.password) {
-      //   return setErrorMessage('Please fill all the fields');
-      // }
       if(email === "" || password === "") {
-        return alert('Please fill all the fields');
+        
+        return setErrorMessage('Please fill all the fields');
       }
       else{
         setEmail("");
         setPassword("");
     }
-    fetch(`${baseUrl}/auth/login`, {
+      setLoading(true);
+      setErrorMessage(null);
+      await fetch(`${baseUrl}/auth/login`, {
       method: 'POST',
       crossDomain: true,
       headers: {
@@ -48,8 +46,16 @@ export default function Signin() {
           window.localStorage.setItem('loggedIn', true);
           navigate('/');
         }
+        else{
+          setLoading(false);
+          setErrorMessage('Something went wrong!...');
+
+        }
       });
-    };
+    
+
+
+  }
 
   return (
     <div style={{width:'100%'}} className=' bg-dark'>
@@ -60,7 +66,7 @@ export default function Signin() {
       <h3 className='fs-3 fw-medium text-white text-center'><span className='fs-1'>G</span>reen <span className='fs-1'>G</span>uard</h3>
       </div>
       <div className="col-md-10 mx-auto col-lg-5">
-        <form className="p-4 p-md-5 border rounded-3 bg-body-tertiary">
+        <form className="p-4 p-md-5 border rounded-3 bg-body-tertiary" onSubmit={handleSubmit}>
           <div className="form-floating mb-3">
             <input type="email" className="form-control" id="email" placeholder="name@example.com"  onChange={(e) => setEmail(e.target.value)} />
             <label htmlFor="floatingInput">Email address</label>
@@ -69,12 +75,25 @@ export default function Signin() {
             <input type="password" className="form-control" id="password" placeholder="Password"  onChange={(e) => setPassword(e.target.value)} />
             <label htmlFor="floatingPassword">Password</label>
           </div>
+          
           <div className="checkbox mb-3">
             
           </div>
-          <button className="w-100 btn btn-lg btn-success" type="submit" onClick={handleSubmit}>Login</button>
+          <button className="w-100 btn btn-lg btn-success" type="submit"  disabled={loading}>
+          {
+              loading ? (<>
+                <span className='ml-2'>Loading...</span>
+              </>
+              ) : 'Login'
+            }
+          </button>
           <hr className="my-4"/>
           <small className="text-body-secondary">Don't have any account! <Link to='/signup' className='t text-decoration-none'>Sign up</Link> </small>
+          {
+            errorMessage && <h5 className='mt-5 text-danger'>
+              {errorMessage}
+            </h5>
+          }
         </form>
       </div>
     </div>
