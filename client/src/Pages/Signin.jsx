@@ -1,6 +1,7 @@
 import React from 'react';
 import { Image } from 'react-bootstrap';
 import logo from '../assets/Images/Logo.png'
+import { Link } from 'react-router-dom';
 
 
 
@@ -35,7 +36,7 @@ export default function Signin() {
       <h3 className='fs-3 fw-medium text-white text-center'><span className='fs-1'>G</span>reen <span className='fs-1'>G</span>uard</h3>
       </div>
       <div className="col-md-10 mx-auto col-lg-5">
-        <form className="p-4 p-md-5 border rounded-3 bg-body-tertiary">
+        <form className="p-4 p-md-5 border rounded-3 bg-body-tertiary" method='post'>
           <div className="form-floating mb-3">
             <input type="email" className="form-control" id="floatingInput" placeholder="name@example.com"/>
             <label htmlFor="floatingInput">Email address</label>
@@ -51,7 +52,7 @@ export default function Signin() {
           </div>
           <button className="w-100 btn btn-lg btn-success" type="submit">Login</button>
           <hr className="my-4"/>
-          <small className="text-body-secondary">By clicking Login, you agree to the terms of use.</small>
+          <small className="text-body-secondary">Don't have any account! <Link to='/signup' className='t text-decoration-none'>Sign up</Link> </small>
         </form>
       </div>
     </div>
