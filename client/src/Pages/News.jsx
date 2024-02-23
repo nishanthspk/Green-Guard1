@@ -6,7 +6,7 @@ export default function News() {
     <div className=" py-5 bg-dark">
     <div className="container-fluid">
 
-      <div className="d-flex flex-wrap gap-4 justify-content-center ">
+      <div className="d-flex flex-wrap justify-content-center gap-4 ">
 
         <div className="">
           <div className="card" style={{width:'18rem', height:'23rem'}}>
@@ -108,7 +108,7 @@ export default function News() {
       <div className='w-100 d-flex justify-content-center mt-5'>
 
       <div>
-      <button type="button" className="btn btn-success btn-lg px-4">Read more news</button>
+      <button type="button" className="btn btn-outline-success btn-lg px-4 border-3">Read more news</button>
       </div>
       </div>
       </div>

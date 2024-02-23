@@ -16,11 +16,11 @@ function myNavbar() {
         <Navbar.Toggle aria-controls="basic-navbar-nav " />
         <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto gap-4 ">
-            <Nav.Link as={Link} to="/">Home</Nav.Link>
-            <Nav.Link as={Link} to="/awareness">Awareness</Nav.Link>
-            <Nav.Link as={Link} to="/news">News</Nav.Link>
-            <Nav.Link as={Link} to="/complaints">Complaints</Nav.Link>
-            <Nav.Link as={Link} to="/signin"><Button variant="success" className='ms-4'>Login</Button>{' '}</Nav.Link>
+            <Nav.Link as={Link}  to="/">Home</Nav.Link>
+            <Nav.Link as={Link}  to="/awareness">Awareness</Nav.Link>
+            <Nav.Link as={Link}  to="/news">News</Nav.Link>
+            <Nav.Link as={Link}  to="/complaints">Complaints</Nav.Link>
+            <Nav.Link as={Link}  to="/signin"><Button variant="outline-success" className='ms-4 border-3'>Login</Button>{' '}</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

@@ -15,10 +15,10 @@ export default function Home() {
         <p className="lead text-light fw-normal">Join GreenGuardians to raise awareness about deforestation, report plant injuries, engage with a vibrant community dedicated to preventing and protecting plants, and stay informed with daily plant news. Together, let's cultivate a greener, healthier planet for future generations.</p>
         <div className="d-flex gap-3 justify-content-center flex-row">
         <Link to='/awareness'>
-        <button type="button" className="btn btn-success btn-lg px-4">Awarness</button>
+        <button type="button" className="btn btn-outline-success btn-lg px-4 border-3">Awarness</button>
         </Link>
         <Link to='/news'>
-        <button type="button" className="btn btn-primary btn-lg px-4 me-md-2">News</button>
+        <button type="button" className="btn btn-outline-primary btn-lg px-4 me-md-2 border-3">News</button>
         </Link>
           
           

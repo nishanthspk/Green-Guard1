@@ -140,3 +140,9 @@ section{
   margin-top: 5px;
   color: white;
 }
+.navbar-nav .nav-link {
+  color: white; /* Change to your desired color */
+}
+.navbar-nav .nav-link:hover {
+  color: rgb(25, 135, 84); /* Change to your desired color */
+}
