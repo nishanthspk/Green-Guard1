@@ -27,7 +27,7 @@ function myNavbar() {
             <Nav.Link as={Link}  to="/news">News</Nav.Link>
             <Nav.Link as={Link}  to="/complaints">Complaints</Nav.Link>
             {isLoggedIn ? (
-            <Nav.Link onClick={Logout}><Button variant="outline-primary" className='ms-4 border-3'>Logout</Button>{' '}</Nav.Link>
+            <Nav.Link onClick={Logout}><Button variant="outline-danger" className='ms-4 border-3'>Logout</Button>{' '}</Nav.Link>
           ) : (
             <Nav.Link as={Link} to="/signin">
               <Button variant="outline-success" className='ms-4 border-3'>Login</Button>{' '}
