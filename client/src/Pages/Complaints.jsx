@@ -2,21 +2,45 @@ import React,{ useRef, useState } from 'react'
 import emailjs from '@emailjs/browser';
 
 export default function Complaints() {
+  const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState('');
+  const [status, setStatus] = useState('');
+
+  const form = useRef();
+  const sendEmail = (e) => {
+    setLoading(true);
+    e.preventDefault();
+    emailjs.sendForm(import.meta.env.VITE_SERVICE_ID ,import.meta.env.VITE_TEMPLATE_ID, form.current, {publicKey:import.meta.env.VITE_PUBLIC_KEY})
+      .then(() => {
+        setLoading(false);
+        setMessage('Your conplaint has been sent successfully.');
+        setStatus('SUCCESS');
+        form.current.reset();
+        },
+        (error) => {
+          setLoading(false);
+          setMessage('Failed to send your complaint. Please try again later.');
+          setStatus('ERROR');
+
+        },
+      );
+  };
+
   return (
     <div style={{width:"100%"}} className='bg-dark d-flex justify-content-center p-5'>
     <div className="container5">
       <div className="form">
           <h2 className=' '>Raise your complaints with us....</h2>
-          <form id="contact-form" autoComplete='off'>
-            <input type="hidden" name="contact_number"/>
+          <form id="contact-form" ref={form} onSubmit={sendEmail} autoComplete='off'>
+            <input type="hidden" name="contact_number"  />
               <div className="inputBx">
                   <input type="text" name="user_name" placeholder="Name"/>
               </div>
               <div className="inputBx">
-                  <input type="email" name="user_mail" placeholder="Email"/>
+                  <input type="email" name="user_mail" placeholder="Email"  />
               </div>
               <div className="inputBx">
-                  <textarea name="message" id="" placeholder="Your complaint..."></textarea>
+                  <textarea name="message" id="" placeholder="Your complaint..." ></textarea>
               </div>
               <div className="inputBx">
                   {/* <input type="submit" value="Send" className="bg-success" disabled={loading}/> */}
