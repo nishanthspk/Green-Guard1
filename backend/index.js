@@ -15,6 +15,7 @@ const app = express();
 
 // Allow requests from the specified frontend origin
 // app.use(cors(corsOptions));
+app.use(cors());
 const dbURI = db;
 mongoose
   .connect(dbURI, {

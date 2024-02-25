@@ -22,7 +22,7 @@ router.post('/signup', async(req,res) => {
         }
         const user = new User({email,password: hashedpassword});
         await user.save();
-        res.status(201).json({message: "User created successfully", user});
+        res.status(201).json({message: "User created successfully"});
     } 
     catch (error) {
         res.status(500).json({message: "Error creating user", error: error.message});
@@ -43,7 +43,8 @@ router.post('/login', async(req,res) => {
     });
 
     if (res.status(201)){
-      return res.json({status:'ok', data: token});
+      const {password: hashedpassword, ...data} = user._doc;
+      return res.json({status:'ok', data: token, user: data});
     } else {
       return res.json({error: "error"});
     }
