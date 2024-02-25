@@ -10,7 +10,7 @@ export default function Complaints() {
   const sendEmail = (e) => {
     setLoading(true);
     e.preventDefault();
-    emailjs.sendForm('service_d6pot4c', 'template_r3bau5n', form.current, {publicKey: '_yYDE2QkWcxEoWb',})
+    emailjs.sendForm(import.meta.env.VITE_SERVICE_ID, import.meta.env.VITE_TEMPLATE_ID, form.current, {publicKey: import.meta.env.VITE_PUBLIC_KEY,})
       .then(() => {
         setLoading(false);
         setMessage('Your conplaint has been sent successfully.');
