@@ -10,7 +10,7 @@ export default function Complaints() {
   const sendEmail = (e) => {
     setLoading(true);
     e.preventDefault();
-    emailjs.sendForm(import.meta.env.VITE_SERVICE_ID ,import.meta.env.VITE_TEMPLATE_ID, form.current, {publicKey:import.meta.env.VITE_PUBLIC_KEY})
+    emailjs.sendForm('service_d6pot4c', 'template_r3bau5n', form.current, {publicKey: '_yYDE2QkWcxEoWb',})
       .then(() => {
         setLoading(false);
         setMessage('Your conplaint has been sent successfully.');
@@ -32,15 +32,15 @@ export default function Complaints() {
       <div className="form">
           <h2 className=' '>Raise your complaints with us....</h2>
           <form id="contact-form" ref={form} onSubmit={sendEmail} autoComplete='off'>
-            <input type="hidden" name="contact_number"  />
+            <input type="hidden" name="contact_number" required />
               <div className="inputBx">
                   <input type="text" name="user_name" placeholder="Name"/>
               </div>
               <div className="inputBx">
-                  <input type="email" name="user_mail" placeholder="Email"  />
+                  <input type="email" name="user_mail" placeholder="Email" required />
               </div>
               <div className="inputBx">
-                  <textarea name="message" id="" placeholder="Your complaint..." ></textarea>
+                  <textarea name="message" id="" placeholder="Your complaint..." required></textarea>
               </div>
               <div className="inputBx">
                   {/* <input type="submit" value="Send" className="bg-success" disabled={loading}/> */}
