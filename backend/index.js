@@ -7,7 +7,7 @@ const app = express();
 
 
 const corsOptions = {
-  origin: ['https://green-guard-server.vercel.app', 'http://localhost:3000'],
+  origin: ["http://localhost:3000", "https://green-guard.vercel.app"],
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   credentials: true, // enable set cookie
   optionsSuccessStatus: 204,
