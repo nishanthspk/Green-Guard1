@@ -34,7 +34,7 @@ export default function Complaints() {
           <form id="contact-form" ref={form} onSubmit={sendEmail} autoComplete='off'>
             <input type="hidden" name="contact_number" required />
               <div className="inputBx">
-                  <input type="text" name="user_name" placeholder="Name"/>
+                  <input type="text" name="user_name" placeholder="Name" />
               </div>
               <div className="inputBx">
                   <input type="email" name="user_mail" placeholder="Email" required />

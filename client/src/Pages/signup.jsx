@@ -59,7 +59,7 @@ export default function Signup() {
       </div>
       <div className="col-md-10 mx-auto col-lg-5">
 
-        <form className="p-4 p-md-5 border rounded-3 bg-body-tertiary" onSubmit={handleSubmit}>
+        <form className="p-4 p-md-5 border rounded-3 bg-body-tertiary" onSubmit={handleSubmit} autoComplete='off'>
           <div className="form-floating mb-3">
             <input type="email" className="form-control" id="email" placeholder="name@example.com" onChange={handleChange}/>
             <label htmlFor="floatingInput">Email address</label>
@@ -80,7 +80,7 @@ export default function Signup() {
             }
           </button>
           <hr className="my-4"/>
-          <small className="text-body-secondary">By clicking Login, you agree to the terms of use.</small>
+          <small className="text-body-secondary">Already have an account! <Link to='/signin' className='t text-decoration-none'>Login</Link> </small>
           {
             errorMessage && <h5 className='mt-5 text-danger'>
               {errorMessage}
