@@ -6,15 +6,15 @@ const db = process.env.MONGO;
 const app = express();
 
 
-// const corsOptions = {
-//   origin: ['https://crazycars.vercel.app'],
-//   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-//   credentials: true, // enable set cookie
-//   optionsSuccessStatus: 204,
-// };
+const corsOptions = {
+  origin: ['https://green-guard-server.vercel.app', 'http://localhost:3000'],
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  credentials: true, // enable set cookie
+  optionsSuccessStatus: 204,
+};
 
 // Allow requests from the specified frontend origin
-// app.use(cors(corsOptions));
+app.use(cors(corsOptions));
 app.use(cors());
 const dbURI = db;
 mongoose

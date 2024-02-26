@@ -9,7 +9,7 @@ import { Link, useNavigate } from 'react-router-dom';
 export default function Signin() {
   const [email,setEmail] = useState('');
     const [password,setPassword] = useState('');
-    const baseUrl = 'http://localhost:3000';
+    const baseUrl = 'https://green-guard-server.vercel.app';
     const navigate = useNavigate();
     const [errorMessage, setErrorMessage] = useState(null);
     const [loading, setLoading] = useState(false);
@@ -66,7 +66,7 @@ export default function Signin() {
       <h3 className='fs-3 fw-medium text-white text-center'><span className='fs-1'>G</span>reen <span className='fs-1'>G</span>uard</h3>
       </div>
       <div className="col-md-10 mx-auto col-lg-5">
-        <form className="p-4 p-md-5 border rounded-3 bg-body-tertiary" onSubmit={handleSubmit} autoComplete='off'>
+        <form className="p-4 p-md-5 border rounded-3 bg-body-tertiary" onSubmit={handleSubmit} >
           <div className="form-floating mb-3"> 
             <input type="email" className="form-control" id="email" placeholder="name@example.com"  onChange={(e) => setEmail(e.target.value)} />
             <label htmlFor="floatingInput">Email address</label>

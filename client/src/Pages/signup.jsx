@@ -8,7 +8,7 @@ export default function Signup() {
   const [formData, setFormData] = useState({});
   const [errorMessage, setErrorMessage] = useState(null);
   const [loading, setLoading] = useState(false);
-  const baseUrl = 'http://localhost:3000';
+  const baseUrl = 'https://green-guard-server.vercel.app';
   const navigate = useNavigate()
 ;
   const handleChange = (e) => {
@@ -32,7 +32,6 @@ export default function Signup() {
         body:JSON.stringify(formData)
       });
       const data=await res.json()
-      console.log(data);
       if (data.success===false) {
         setLoading(false);
        return setErrorMessage("Username or Email already exists! Please try again.");
@@ -59,7 +58,7 @@ export default function Signup() {
       </div>
       <div className="col-md-10 mx-auto col-lg-5">
 
-        <form className="p-4 p-md-5 border rounded-3 bg-body-tertiary" onSubmit={handleSubmit} autoComplete='off'>
+        <form className="p-4 p-md-5 border rounded-3 bg-body-tertiary" onSubmit={handleSubmit} >
           <div className="form-floating mb-3">
             <input type="email" className="form-control" id="email" placeholder="name@example.com" onChange={handleChange}/>
             <label htmlFor="floatingInput">Email address</label>
